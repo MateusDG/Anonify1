@@ -17,4 +17,4 @@ fi
 
 echo "Running the Java program..."
 # Run the program with the fully qualified main class name
-sudo java -cp "$OUT_DIR" "$MAIN_CLASS"
+sudo java -Djava.awt.headless=false -Dsun.awt.x11.xembedserver=true -cp "$OUT_DIR" "$MAIN_CLASS"
