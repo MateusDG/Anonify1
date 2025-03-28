@@ -12,8 +12,10 @@ import org.junit.jupiter.api.Test;
 
 import com.anonify.services.Services;
 
-// Serviço dummy para capturar a mensagem enviada
-class DummyServices extends Services {
+/**
+ * Classe dummy para simular o comportamento de Services no teste.
+ */
+class DummyServicesForInputTest extends Services {
     public String lastMessageSent = null;
     
     @Override
@@ -23,28 +25,30 @@ class DummyServices extends Services {
 }
 
 public class InputPanelTest {
-
     private ChatPanel chatPanel;
-    private DummyServices dummyServices;
+    private DummyServicesForInputTest dummyServices;
     private InputPanel inputPanel;
     
     @BeforeEach
-    public void setup() {
+    public void setUp() {
         chatPanel = new ChatPanel();
-        dummyServices = new DummyServices();
+        dummyServices = new DummyServicesForInputTest();
         inputPanel = new InputPanel(chatPanel, dummyServices);
     }
     
     /**
-     * Método auxiliar para buscar um componente do tipo especificado dentro de um container.
+     * Método auxiliar que busca recursivamente um JTextField dentro de um Container.
      */
-    private <T> T findComponent(Container container, Class<T> clazz) {
+    private JTextField findTextField(Container container) {
         for (Component comp : container.getComponents()) {
-            if (clazz.isInstance(comp)) {
-                return clazz.cast(comp);
-            } else if (comp instanceof Container) {
-                T result = findComponent((Container) comp, clazz);
-                if (result != null) return result;
+            if (comp instanceof JTextField) {
+                return (JTextField) comp;
+            }
+            if (comp instanceof Container) {
+                JTextField result = findTextField((Container) comp);
+                if (result != null) {
+                    return result;
+                }
             }
         }
         return null;
@@ -52,22 +56,21 @@ public class InputPanelTest {
     
     @Test
     public void testSendMessageClearsTextFieldAndCallsService() {
-        // Busca o JTextField dentro do InputPanel
-        JTextField textField = findComponent(inputPanel, JTextField.class);
-        assertNotNull(textField, "Text field should be found");
+        // Procura pelo JTextField no InputPanel
+        JTextField textField = findTextField(inputPanel);
+        assertNotNull(textField, "Text field should be found in InputPanel");
         
         String testMessage = "Hello";
         textField.setText(testMessage);
         
-        // Simula o acionamento do actionPerformed (por exemplo, pressionando Enter)
+        // Simula o acionamento do actionPerformed (como se o usuário pressionasse Enter)
         for (java.awt.event.ActionListener al : textField.getActionListeners()) {
             al.actionPerformed(null);
         }
         
         // Verifica se o campo de texto foi limpo
-        assertEquals("", textField.getText(), "Text field should be cleared after sending");
-        
+        assertEquals("", textField.getText(), "Text field should be cleared after sending message");
         // Verifica se o serviço dummy recebeu a mensagem
-        assertEquals(testMessage, dummyServices.lastMessageSent, "DummyServices should have received the message");
+        assertEquals(testMessage, dummyServices.lastMessageSent, "Dummy service should receive the message");
     }
 }

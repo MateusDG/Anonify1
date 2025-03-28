@@ -1,10 +1,11 @@
+package com.anonify.services;
+
 import org.junit.jupiter.api.Test;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.ArgumentMatchers.contains;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 
-import com.anonify.services.Services;
 import com.anonify.ui.components.ChatPanel;
 
 public class ServicesTest {

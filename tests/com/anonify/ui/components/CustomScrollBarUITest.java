@@ -1,5 +1,4 @@
 package com.anonify.ui.components;
-
 import java.awt.Dimension;
 
 import javax.swing.JButton;

@@ -1,5 +1,4 @@
 package com.anonify.ui.components;
-
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
