@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="BR"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-19\bin"/>
-    <property name="sun.java.command" value="C:\Users\mateu\AppData\Local\Temp\surefire1017675814737316172\surefirebooter-20250327220615900_3.jar C:\Users\mateu\AppData\Local\Temp\surefire1017675814737316172 2025-03-27T22-06-15_662-jvmRun1 surefire-20250327220615900_1tmp surefire_0-20250327220615900_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\mateu\AppData\Local\Temp\surefire4836751975898710804\surefirebooter-20250327220825107_3.jar C:\Users\mateu\AppData\Local\Temp\surefire4836751975898710804 2025-03-27T22-08-24_877-jvmRun1 surefire-20250327220825107_1tmp surefire_0-20250327220825107_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\mateu\Desktop\Anonify1\target\test-classes;C:\Users\mateu\Desktop\Anonify1\target\classes;C:\Users\mateu\.m2\repository\org\junit\jupiter\junit-jupiter\5.9.2\junit-jupiter-5.9.2.jar;C:\Users\mateu\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.2\junit-jupiter-api-5.9.2.jar;C:\Users\mateu\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\mateu\.m2\repository\org\junit\platform\junit-platform-commons\1.9.2\junit-platform-commons-1.9.2.jar;C:\Users\mateu\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\mateu\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.9.2\junit-jupiter-params-5.9.2.jar;C:\Users\mateu\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.2\junit-jupiter-engine-5.9.2.jar;C:\Users\mateu\.m2\repository\org\junit\platform\junit-platform-engine\1.9.2\junit-platform-engine-1.9.2.jar;C:\Users\mateu\.m2\repository\org\mockito\mockito-core\4.8.0\mockito-core-4.8.0.jar;C:\Users\mateu\.m2\repository\net\bytebuddy\byte-buddy\1.12.14\byte-buddy-1.12.14.jar;C:\Users\mateu\.m2\repository\net\bytebuddy\byte-buddy-agent\1.12.14\byte-buddy-agent-1.12.14.jar;C:\Users\mateu\.m2\repository\org\objenesis\objenesis\3.2\objenesis-3.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\mateu\AppData\Local\Temp\surefire1017675814737316172\surefirebooter-20250327220615900_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\mateu\AppData\Local\Temp\surefire4836751975898710804\surefirebooter-20250327220825107_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="19.0.2+7-44"/>
@@ -59,6 +59,6 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="63.0"/>
   </properties>
-  <testcase name="testAddOrSwitchTabAddsTab" classname="com.anonify.ui.components.TabManagerTest" time="0.002"/>
-  <testcase name="testOpenSettingsTabAddsTab" classname="com.anonify.ui.components.TabManagerTest" time="0.003"/>
+  <testcase name="testAddOrSwitchTabAddsTab" classname="com.anonify.ui.components.TabManagerTest" time="0.003"/>
+  <testcase name="testOpenSettingsTabAddsTab" classname="com.anonify.ui.components.TabManagerTest" time="0.004"/>
 </testsuite>
